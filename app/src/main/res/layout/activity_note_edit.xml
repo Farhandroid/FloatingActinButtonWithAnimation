@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="tanvir.floatingactinbuttonwithanimation.NoteEdit">
+
+    <RelativeLayout
+        android:id="@+id/TopMenue"
+        android:background="#6aa84f"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText
+            android:id="@+id/titleET"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:layout_width="270dp"
+            android:layout_height="32dp"
+            android:textColor="#000000"
+            android:textColorHint="#A9A9A9"
+            android:hint="Enter Title if needed"
+            android:background="@drawable/roundcorner"
+            />
+        <Button
+            android:onClick="body"
+            android:id="@+id/settingBTN"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/setting"/>
+
+        <Button
+            android:gravity="center"
+            android:background="@drawable/share"
+            android:layout_toLeftOf="@id/settingBTN"
+            android:layout_width="38dp"
+            android:layout_height="38dp" />
+
+    </RelativeLayout>
+
+    <view
+        android:inputType="textCapWords|textMultiLine"
+        android:textColor="#000000"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/TopMenue"
+        class="tanvir.floatingactinbuttonwithanimation.NoteEdit$LineEditText"
+        android:background="#e1eddb"
+        android:capitalize="sentences"
+        android:fadingEdge="vertical"
+        android:gravity="top"
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        android:textSize="22sp" />
+
+
+</RelativeLayout>
